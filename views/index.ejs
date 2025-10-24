@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Helper</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Health Helper</h1>
+      <% if (!currentUser) { %>
+        <p class="lead">Track your BMI, set goals, and improve your health journey.</p>
+        <p><a href="/signin">Sign In</a> | <a href="/signup">Sign Up</a></p>
+      <% } else { %>
+        <p class="lead">Welcome, <%= currentUser.username %>!</p>
+        <form action="/signout" method="POST">
+          <button type="submit" class="secondary">Sign Out</button>
+        </form>
+      <% } %>
+    </header>
+
+    <% if (currentUser) { %>
+      <section class="card">
+        <h2>Calculate BMI</h2>
+        <form action="/calculate-bmi" method="POST" class="stack">
+          <div class="row">
+            <div>
+              <label for="weight">Weight (kg)</label>
+              <input type="number" name="weight" required placeholder="e.g., 70">
+            </div>
+            <div>
+              <label for="height">Height (cm)</label>
+              <input type="number" name="height" required placeholder="e.g., 170">
+            </div>
+          </div>
+          <button type="submit">Calculate & Save</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Your BMI History</h2>
+        <% if (bmiHistory.length === 0) { %>
+          <p>No BMI records yet. Enter your first measurement above!</p>
+        <% } else { %>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Weight (kg)</th>
+              <th>BMI</th>
+            </tr>
+            <% bmiHistory.forEach(record => { %>
+              <tr>
+                <td><%= new Date(record.created_at).toLocaleDateString() %></td>
+                <td><%= record.weight %></td>
+                <td><%= record.bmi %></td>
+              </tr>
+            <% }) %>
+          </table>
+        <% } %>
+      </section>
+    <% } %>
+
+    <footer>
+      <p>2025 Strive Health | Built with care for your wellness journey.</p>
+    </footer>
+  </div>
+</body>
+</html>
