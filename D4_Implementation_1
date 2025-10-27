@@ -76,12 +76,12 @@
  ## 6. Deployment
  1. **Live System Link:** Direct URL to your deployed application
  2. **Deployment Method:** Detailed description of your deployment process
- 3. **Platform Justification:** Why you chose your deployment platform
+ 3. **Platform Justification:** Why you chose your deployment platform:We chose oracle as our deployment platform becasue it will allow us to implemtnt sql
+    and it will allow us to use it in for the other deployments without running into problems like we had in other platforms
  ## 7. Licensing
  1. Inform the license you adopted for your source code (e.g., MIT, Apache 2.0, GPL)
  2. Configure GitHub accordingly
- 3. Explain why you adopted this license: We chose oracle as our deployment platform becasue it will allow us to implemtnt sql
-    and it will allow us to use it in for the other deployments without running into problems like we had in other platforms
+ 3. Explain why you adopted this license:
  ## 8. Repository Documentation
  README.md (primary focus)
  CONTRIBUTING.md (optional but recommended)
