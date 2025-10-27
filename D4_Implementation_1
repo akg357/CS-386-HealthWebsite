@@ -34,12 +34,19 @@
  7. **Visual Evidence:** https://docs.google.com/document/d/1mZYs16LhCMBAow0Vr5UW66uHGmBsPVlePJUQzYHDhDY/edit?usp=sharing
  ### 2.4 Abel Gebrezghr
  1. **Requirement:**
+ As a user, I want to receive notifications  so that I feel comfortable and confident with what I need to complete and for being greeted into the website .
  2. **Issue:**
+ https://github.com/akg357/CS-386-HealthWebsite/issues/21
  3. **Pull Request Link:**
+ https://github.com/akg357/CS-386-HealthWebsite/pull/22
  4. **Implemented By:**
+ Abel Gebrezghr
  5. **Approved By:**
+ Aron Gebrezghr
  6. **Automated Tests:**
+ https://github.com/akg357/CS-386-HealthWebsite/blob/abel_notification/tests/test_notification.js 
  7. **Visual Evidence:**
+ ![Welcome Notification](https://raw.githubusercontent.com/akg357/CS-386-HealthWebsite/abel_notification/screenshots/Screenshot%202025-10-26%20at%209.14.49%E2%80%AFPM.png) 
  ### 2.5 Emory WIlliams
  1. **Requirement:**
  2. **Issue:**
