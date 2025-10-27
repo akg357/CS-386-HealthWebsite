@@ -120,7 +120,8 @@
  3. **Usability Considerations:** Explain design decisions for user experience
  ## 10. Retrospective Analysis
  1. **Key Learnings:** What did your team discover during development?
- 2. **Challenges Overcome:** Major obstacles and how you solved them
+ 2. **Challenges Overcome:** Major obstacles and how you solved them: Major obstacles were getting some files to work such as the styles sheet
+       and also deploying to oracle and we also had problems with pushing changes
  3. **Future Improvements:** Specific changes planned for the next release
  ## 11. System Demonstration
  - Video Link: URL to a demonstration video
