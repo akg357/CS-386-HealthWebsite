@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import pg from "pg";
+import oracledb from "oracledb";
 import bcrypt from "bcryptjs";
 import session from "express-session";
 import dotenv from "dotenv";
@@ -24,7 +24,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(
   session({
-    secret: "supersecretkey",
+    secret: process.env.SESSION_SECRET || "supersecretkey",
     resave: false,
     saveUninitialized: false,
   })
@@ -35,26 +35,41 @@ app.use((req, res, next) => {
   next();
 });
 
-const db = new pg.Pool({
-  connectionString:
-    process.env.DATABASE_URL ||
-    "postgresql://postgres:password@localhost:5432/healthwebsite",
-});
+// Oracle DB connection setup
+const dbConfig = {
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  connectString: process.env.DB_CONNECT_STRING,
+};
 
-db.connect()
-  .then(() => console.log("Connected to PostgreSQL"))
-  .catch((err) => console.error(" Database connection failed:", err.message));
+async function initOracle() {
+  try {
+    await oracledb.createPool(dbConfig);
+    console.log("Connected to Oracle Database");
+  } catch (err) {
+    console.error("Database connection failed:", err.message);
+  }
+}
+initOracle();
+
+// Helper to get connection
+async function getConn() {
+  return await oracledb.getConnection();
+}
 
 //main page
 app.get("/", async (req, res) => {
   try {
     let bmiHistory = [];
     if (req.session.userId) {
-      const result = await db.query(
-        "SELECT * FROM bmi_records WHERE user_id = $1 ORDER BY created_at DESC",
-        [req.session.userId]
+      const conn = await getConn();
+      const result = await conn.execute(
+        `SELECT * FROM bmi_records WHERE user_id = :id ORDER BY created_at DESC`,
+        [req.session.userId],
+        { outFormat: oracledb.OUT_FORMAT_OBJECT }
       );
       bmiHistory = result.rows;
+      await conn.close();
     }
 
     res.render("index", { bmiHistory });
@@ -74,13 +89,22 @@ app.post("/signup", async (req, res) => {
   const hashed = await bcrypt.hash(password, 10);
 
   try {
-    const result = await db.query(
-      "INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id, username",
-      [username, hashed]
+    const conn = await getConn();
+    const result = await conn.execute(
+      `INSERT INTO users (username, password) VALUES (:username, :password) RETURNING id, username INTO :id, :uname`,
+      {
+        username,
+        password: hashed,
+        id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER },
+        uname: { dir: oracledb.BIND_OUT, type: oracledb.STRING },
+      }
     );
 
-    req.session.userId = result.rows[0].id;
-    req.session.user = { username: result.rows[0].username };
+    await conn.commit();
+    await conn.close();
+
+    req.session.userId = result.outBinds.id[0];
+    req.session.user = { username: result.outBinds.uname[0] };
     res.redirect("/");
   } catch (err) {
     console.error(err);
@@ -96,12 +120,18 @@ app.get("/signin", (req, res) => {
 app.post("/signin", async (req, res) => {
   const { username, password } = req.body;
   try {
-    const result = await db.query("SELECT * FROM users WHERE username = $1", [username]);
-    const user = result.rows[0];
+    const conn = await getConn();
+    const result = await conn.execute(
+      `SELECT * FROM users WHERE username = :username`,
+      [username],
+      { outFormat: oracledb.OUT_FORMAT_OBJECT }
+    );
+    await conn.close();
 
-    if (user && (await bcrypt.compare(password, user.password))) {
-      req.session.userId = user.id;
-      req.session.user = { username: user.username };
+    const user = result.rows[0];
+    if (user && (await bcrypt.compare(password, user.PASSWORD))) {
+      req.session.userId = user.ID;
+      req.session.user = { username: user.USERNAME };
       res.redirect("/");
     } else {
       res.send("Invalid credentials");
@@ -125,10 +155,13 @@ app.post("/calculate-bmi", async (req, res) => {
   if (!req.session.userId) return res.redirect("/signin");
 
   try {
-    await db.query(
-      "INSERT INTO bmi_records (user_id, weight, bmi) VALUES ($1, $2, $3)",
+    const conn = await getConn();
+    await conn.execute(
+      `INSERT INTO bmi_records (user_id, weight, bmi) VALUES (:uid, :weight, :bmi)`,
       [req.session.userId, weight, bmi]
     );
+    await conn.commit();
+    await conn.close();
     res.redirect("/");
   } catch (err) {
     console.error(err);
@@ -138,132 +171,69 @@ app.post("/calculate-bmi", async (req, res) => {
 
 //retrieves the weight from the data table in bmi_records 
 app.get("/current-weight", async (req, res) => {
-    if(!req.session.userId) return res.redirect("/signin");
+  if (!req.session.userId) return res.redirect("/signin");
 
-    //seach for the latest weight 
-    try {
-      const result = await db.query(
-        "SELECT weight FROM bmi_records WHERE user_id = $1 ORDER BY created_at DESC LIMIT 1",
-        [req.session.userId]
-      );
-      
-      //handles if there is no weight that exists 
-      if (result.rows.length === 0) {
-        return res.json({ weight: null });
-      }
+  //search for the latest weight 
+  try {
+    const conn = await getConn();
+    const result = await conn.execute(
+      `SELECT weight FROM bmi_records WHERE user_id = :id ORDER BY created_at DESC FETCH FIRST 1 ROWS ONLY`,
+      [req.session.userId],
+      { outFormat: oracledb.OUT_FORMAT_OBJECT }
+    );
+    await conn.close();
 
-      //this returns the most recent weight 
-      res.json({ weight: result.rows[0].weight });
-    } catch (err) {
-      console.error(err);
-      res.status(500).json({ error: "Error fetching weight" });
-    }
-});
-
-
-
-//calcualte actual macros for desired weight 
-async function calculateMacros() {
-    const desiredWeight = document.getElementById("goalWeight").value;
-    //will add pace functionality in the future 
-
-    //check to make sure desired weight is a valid integer for calculation
-    if (isNaN(desiredWeight) || desiredWeight <= 0) {
-      alert("Please enter a valid weight");
-      return null;
+    //handles if there is no weight that exists 
+    if (result.rows.length === 0) {
+      return res.json({ weight: null });
     }
 
-    //retireves the weight of user from the data base 
-    let currentWeight;
-    try {
-      const retrieval = await fetch("/current-weight");
-      if(!retrieval.ok) throw new Error("No weight found");
-      const data = await retrieval.json();
-      currentWeight = parseFloat(data.weight);
+    //this returns the most recent weight 
+    res.json({ weight: result.rows[0].WEIGHT });
   } catch (err) {
     console.error(err);
-    alert("Error could not retireve weight from the database");
-    return null
+    res.status(500).json({ error: "Error fetching weight" });
   }
-
-  /*currently displaying weight based on their desired weight and if thats more or less then their current weight 
-  these number can change this just made the most sense for now 
-  also will need to update once the pace  functionality is implemented
-  */
-    let protein, carbs;
-    if(desiredWeight > weight) {
-      //trying to gain weight
-      protein = (desiredWeight * 2.2);
-      carbs = (desiredWeight * 5.0);
-    } else if(desiredWeight < weight) {
-      //trying to lose weight 
-      protein = (desiredWeight * 1.8);
-      carbs = (desiredWeight * 3.0)
-    } else {
-      //if weight the same then for maintance of current weight 
-      protein = (desiredWeight * 2.0);
-      carbs = (desiredWeight * 4.0);
-    }
-
-    document.getElementById("proteinPerDay").textContent = protein.toFixed(1);
-    document.getElementById("carbsPerDay").textContent = carbs.toFixed(1);
-
-    //return data so that it can be saved into the data table 
-    return {
-      weight: currentWeight,
-      dersiredWeight,
-      protein: protein,
-      carbs: carbs
-    }
-}
-
-function saveMacros(data) {
-  //check to make sure data isnt null
-  if (!data) return; 
-
-  //sends the data to the back end 
-  fetch("/calculate-goal-weight", {
-    method: "POST", 
-    headers: {
-      "Content-Type": "application/json" 
-    },
-    body: JSON.stringify(data) // this converts the JS object to a JSON String 
-  })
-  .then(res => res.json())  // parse repsonse from server as JSON
-  .then(response => console.log("Saved:", response.message)) //success message
-  .catch(err => console.error("Error saving macros:", err)); //check for errors :(
-}
-
-//event listener for button updates front end while saving the data to the backend into new data table 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btnCalculate");
-  if(!btn) {
-    console.error("not found");
-    return;
-  }
-  btn.addEventListener("click", async () => {
-    console.log("button clicked");
-    const data = await calculateMacros();
-    console.log("Data collected: ", data);
-    saveMacros(data);
-  });
 });
 
+// notifications 
+app.get("/notifications", async (req, res) => {
+  if (!req.session.userId) return res.status(401).json({ error: "Not logged in" });
 
- 
+  try {
+    const conn = await getConn();
+    const result = await conn.execute(
+      `SELECT * FROM bmi_records WHERE user_id = :id AND TRUNC(created_at) = TRUNC(SYSDATE)`,
+      [req.session.userId],
+      { outFormat: oracledb.OUT_FORMAT_OBJECT }
+    );
+    await conn.close();
 
+    if (result.rows.length === 0) {
+      return res.json({ notify: true, message: " No logged weight today!" });
+    } else {
+      return res.json({ notify: false });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error checking notifications" });
+  }
+});
 //store data into table 
 app.post("/calculate-goal-weight", async (req, res) => {
-  const { weight, desiredWeight, protein, carbs} = req.body; 
+  const { weight, desiredWeight, protein, carbs } = req.body; 
 
-  if(!req.session.userId) return res.redirect("/signin");
+  if (!req.session.userId) return res.redirect("/signin");
 
-  try{
-    await db.query(
-      "INSERT INTO desired-weight-records (user_id, weight, desired_weight, protein, carbs) VALUES ($1, $2, $3, $4, $5)",
+  try {
+    const conn = await getConn();
+    await conn.execute(
+      `INSERT INTO desired_weight_records (user_id, weight, desired_weight, proteins, carbs)
+       VALUES (:uid, :weight, :desiredWeight, :protein, :carbs)`,
       [req.session.userId, weight, desiredWeight, protein, carbs]
     );
-
+    await conn.commit();
+    await conn.close();
     res.redirect("/");
   } catch (err) {
     console.error(err);

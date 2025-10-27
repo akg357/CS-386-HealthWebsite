@@ -1,54 +1,62 @@
-//calcualte actual macros for desired weight 
 async function calculateMacros() {
-    const desiredWeight = document.getElementById("goalWeight").value;
-    //will add pace functionality in the future 
-
-    //check to make sure desired weight is a valid integer for calculation
-    if (isNaN(desiredWeight) || desiredWeight <= 0) {
-      alert("Please enter a valid weight");
-      return null;
-    }
-
-    //retireves the weight of user from the data base 
-    let currentWeight;
-    try {
-      const retrieval = await fetch("/current-weight");
-      if(!retrieval.ok) throw new Error("No weight found");
-      const data = await retrieval.json();
-      currentWeight = parseFloat(data.weight);
-  } catch (err) {
-    console.error(err);
-    alert("Error could not retireve weight from the database");
-    return null
+  const desiredWeight = parseFloat(document.getElementById("goalWeight").value);
+  if (isNaN(desiredWeight) || desiredWeight <= 0) {
+    alert("Please enter a valid weight.");
+    return null;
   }
 
-  /*currently displaying weight based on their desired weight and if thats more or less then their current weight 
-  these number can change this just made the most sense for now 
-  also will need to update once the pace  functionality is implemented
-  */
-    let protein, carbs;
-    if(desiredWeight > weight) {
-      //trying to gain weight
-      protein = (desiredWeight * 2.2);
-      carbs = (desiredWeight * 5.0);
-    } else if(desiredWeight < weight) {
-      //trying to lose weight 
-      protein = (desiredWeight * 1.8);
-      carbs = (desiredWeight * 3.0)
-    } else {
-      //if weight the same then for maintance of current weight 
-      protein = (desiredWeight * 2.0);
-      carbs = (desiredWeight * 4.0);
-    }
+  // Get current weight from backend
+  const response = await fetch("/current-weight");
+  if (!response.ok) {
+    alert("Error fetching current weight. Please log in.");
+    return null;
+  }
 
-    document.getElementById("proteinPerDay").textContent = protein.toFixed(1);
-    document.getElementById("carbsPerDay").textContent = carbs.toFixed(1);
+  const data = await response.json();
+  const currentWeight = parseFloat(data.weight);
 
-    //return data so that it can be saved into the data table 
-    return {
-      weight: currentWeight,
-      dersiredWeight,
-      protein: protein,
-      carbs: carbs
-    }
+  // Calculate macros
+  let protein, carbs;
+  if (desiredWeight > currentWeight) {
+    protein = desiredWeight * 2.2;
+    carbs = desiredWeight * 5.0;
+  } else if (desiredWeight < currentWeight) {
+    protein = desiredWeight * 1.8;
+    carbs = desiredWeight * 3.0;
+  } else {
+    protein = desiredWeight * 2.0;
+    carbs = desiredWeight * 4.0;
+  }
+
+  // Update UI
+  document.getElementById("proteinPerDay").textContent = protein.toFixed(1);
+  document.getElementById("carbsPerDay").textContent = carbs.toFixed(1);
+
+  return { currentWeight, desiredWeight, protein, carbs };
 }
+
+async function saveMacros(data) {
+  if (!data) return;
+
+  const res = await fetch("/calculate-goal-weight", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  if (res.ok) {
+    alert("Your goal and macros have been saved!");
+  } else {
+    alert("Error saving data.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("btnCalculate");
+  if (btn) {
+    btn.addEventListener("click", async () => {
+      const data = await calculateMacros();
+      await saveMacros(data);
+    });
+  }
+});
