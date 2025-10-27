@@ -1,62 +1,53 @@
-async function calculateMacros() {
-  const desiredWeight = parseFloat(document.getElementById("goalWeight").value);
-  if (isNaN(desiredWeight) || desiredWeight <= 0) {
-    alert("Please enter a valid weight.");
-    return null;
-  }
-
-  // Get current weight from backend
-  const response = await fetch("/current-weight");
-  if (!response.ok) {
-    alert("Error fetching current weight. Please log in.");
-    return null;
-  }
-
-  const data = await response.json();
-  const currentWeight = parseFloat(data.weight);
-
-  // Calculate macros
-  let protein, carbs;
-  if (desiredWeight > currentWeight) {
-    protein = desiredWeight * 2.2;
-    carbs = desiredWeight * 5.0;
-  } else if (desiredWeight < currentWeight) {
-    protein = desiredWeight * 1.8;
-    carbs = desiredWeight * 3.0;
-  } else {
-    protein = desiredWeight * 2.0;
-    carbs = desiredWeight * 4.0;
-  }
-
-  // Update UI
-  document.getElementById("proteinPerDay").textContent = protein.toFixed(1);
-  document.getElementById("carbsPerDay").textContent = carbs.toFixed(1);
-
-  return { currentWeight, desiredWeight, protein, carbs };
-}
-
-async function saveMacros(data) {
-  if (!data) return;
-
-  const res = await fetch("/calculate-goal-weight", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-
-  if (res.ok) {
-    alert("Your goal and macros have been saved!");
-  } else {
-    alert("Error saving data.");
-  }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btnCalculate");
-  if (btn) {
-    btn.addEventListener("click", async () => {
-      const data = await calculateMacros();
-      await saveMacros(data);
-    });
-  }
+  const btnBmi = document.getElementById("btnFind");
+  btnBmi.addEventListener("click", calculateBMI);
 });
+
+// This function runs when the button is pressed
+    function calculateBMI() {
+      // Get the values from the text boxes
+      const h = document.getElementById("height").value;
+      const w = document.getElementById("weight").value;
+      const heightunits = document.getElementById("heightUnit").value;
+      const weightunits = document.getElementById("weightUnit").value;
+
+      // Convert them to numbers
+      const height = parseFloat(h);
+      const weight = parseFloat(w);
+
+      // Check for valid input
+      if (isNaN(height) || isNaN(weight)) {
+        document.getElementById("bmiResult").textContent = "Please enter valid numbers.";
+        return;
+      }
+
+      let result;
+
+      if (heightunits == "cm" && weightunits == "kg")
+      {
+        result = bmi_metric(height, weight);
+      }
+      else if (heightunits == "in" && weightunits == "lb")
+      {
+        result = bmi_imperial(height, weight);
+      }
+
+      // Display the result
+      document.getElementById("bmiResult").textContent = `Result: ${result}`;
+    }
+
+    // Example function that uses the two inputs
+    export function bmi_metric(height, weight) 
+    {
+        heightm = height / 100;
+        let bmi = weight / (heightm * heightm);
+        let rounded = bmi.toFixed(2);
+        return rounded;
+    }
+
+    export function bmi_imperial(height, weight) 
+    {
+        let bmi = (703 * weight) / (height * height);
+        let rounded = bmi.toFixed(2);
+        return rounded;
+    }

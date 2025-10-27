@@ -36,7 +36,7 @@
               <div class="row">
                 <div>
                   <label for="height">Height</label>
-                  <input id="height" name="height" type="number" inputmode="decimal" placeholder="e.g., 170 (cm) or 5.6 (ft)"
+                  <input id="height" name="height" type="number" inputmode="decimal" placeholder="e.g., 170 (cm) or 60 (in)"
                         aria-describedby="heightHelp" min="0" step="any" required>
                   <div id="heightHelp" class="muted">Units selectable below.</div>
                 </div>
@@ -70,7 +70,7 @@
                   <label for="heightUnit">Height Unit</label>
                   <select id="heightUnit" name="heightUnit">
                     <option value="cm" selected>Centimeters (cm)</option>
-                    <option value="ft">Feet (ft)</option>
+                    <option value="in">Inches (in)</option>
                   </select>
                 </div>
                 <div>
@@ -84,7 +84,7 @@
             </fieldset>
 
             <div class="inline">
-              <button type="button" id="btnFind">Find Healthy Weight</button>
+              <button type="button" id="btnFind">Calculate BMI</button>
               <button type="reset" class="secondary">Clear</button>
               <span class="muted">(*placeholder only — no calculations wired yet)</span>
             </div>
@@ -92,7 +92,9 @@
             <!-- Placeholder result area -->
             <div id="healthyWeightResult" class="result" aria-live="polite">
               <strong>Suggested healthy weight:</strong>
-              <div class="muted">Will appear here after you click “Find Healthy Weight”.</div>
+              <div>
+                <p id="bmiResult"></p>
+              </div>
             </div>
           </form>
         </section>
@@ -157,7 +159,7 @@
     <!-- Minimal JS scaffolding (no logic yet) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./app.js"></script>
+    <script src="main.js"></script>
 
 
     <script>
