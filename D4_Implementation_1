@@ -1,9 +1,11 @@
  # D4 Implementation 1
  ## 1. Introduction
- **Description:**
- **Value proposition:**
- **MVP:**
- **Repository:**
+ **Description: Health website system is designed to help users moitor their health and be able to use a bmi calculator and 
+       be stay informed and help users achieve goals in health. Our website will allow for easy navigatoin. **
+ **Value proposition:Our health website enables personal health data by offereing a bmi calculator and helping users stay informed**
+ **MVP:Our main features are the bmi calculator and the display of the results after the user inputs their inforamtion. 
+       Our website features also include links to informative websites that will help based on the results a user recieves**
+ **Repository:https://github.com/akg357/CS-386-HealthWebsite.git**
  ## 2. Implemented Requirements
  ### 2.1 Anna Cheatham
  1. **Requirement:** As a user, I want to be able to calculate my BMI, so that I can get a bit of understanding on how healthy I am.
@@ -23,13 +25,13 @@
  6. **Automated Tests:**
  7. **Visual Evidence:**
  ### 2.3 Aron Gebrezghr
- 1. **Requirement:**
+ 1. **Requirement:** As a registered User I want to be able to access great recources to help me understand my health better.
  2. **Issue:**
- 3. **Pull Request Link:**
- 4. **Implemented By:**
- 5. **Approved By:**
+ 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/resources.html
+ 4. **Implemented By:** Aron Gebrezghr
+ 5. **Approved By:** Abel gebrezghr 
  6. **Automated Tests:**
- 7. **Visual Evidence:**
+ 7. **Visual Evidence:** https://docs.google.com/document/d/1mZYs16LhCMBAow0Vr5UW66uHGmBsPVlePJUQzYHDhDY/edit?usp=sharing
  ### 2.4 Abel Gebrezghr
  1. **Requirement:**
  2. **Issue:**
@@ -47,13 +49,13 @@
  6. **Automated Tests:**
  7. **Visual Evidence:**
  ### 2.6 Ethan Senger
- 1. **Requirement:**
- 2. **Issue:**
+ 1. **Requirement:*As a full-time engineer with kids, I want to easily know how to lose weight, so that I can not spend too much time trying to set up a plan to lose weight.*
+ 2. **Issue:*https://github.com/akg357/CS-386-HealthWebsite/issues/4*
  3. **Pull Request Link:**
- 4. **Implemented By:**
+ 4. **Implemented By:Ethan Senger**
  5. **Approved By:**
- 6. **Automated Tests:**
- 7. **Visual Evidence:**
+ 6. **Automated Tests:*https://docs.google.com/document/d/1UV69S2Z4SXSLGD9XNqwS2W_MpmwFHtcGrUJzA9u64z8/edit?tab=t.0*
+ 7. **Visual Evidence:*https://docs.google.com/document/d/1UV69S2Z4SXSLGD9XNqwS2W_MpmwFHtcGrUJzA9u64z8/edit?usp=sharing*
  ## 3. Auotmated Testing
 1. **Testing Framework:** 
 2. **Test Location:**
@@ -78,7 +80,8 @@
  ## 7. Licensing
  1. Inform the license you adopted for your source code (e.g., MIT, Apache 2.0, GPL)
  2. Configure GitHub accordingly
- 3. Explain why you adopted this license
+ 3. Explain why you adopted this license: We chose oracle as our deployment platform becasue it will allow us to implemtnt sql
+    and it will allow us to use it in for the other deployments without running into problems like we had in other platforms
  ## 8. Repository Documentation
  README.md (primary focus)
  CONTRIBUTING.md (optional but recommended)
