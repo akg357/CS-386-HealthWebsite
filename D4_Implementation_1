@@ -9,12 +9,12 @@
  ## 2. Implemented Requirements
  ### 2.1 Anna Cheatham
  1. **Requirement:** As a user, I want to be able to calculate my BMI, so that I can get a bit of understanding on how healthy I am.
- 2. **Issue:**
- 3. **Pull Request Link:**
+ 2. **Issue:** https://github.com/akg357/CS-386-HealthWebsite/issues/28
+ 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/27
  4. **Implemented By:** Anna Cheatham
- 5. **Approved By:**
- 6. **Automated Tests:**
- 7. **Visual Evidence:**
+ 5. **Approved By:** Ethan
+ 6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/test_bmi.js
+ 7. **Visual Evidence:** It had been working but when merged it no longer outputs the number. I forgot to take a picture before the merge unfortunately.
  ### 2.2 Josselin Retiguin
  1. **Requirement:As a registered user, I want to ensure my data is saved and viewable 
     every time I log back in so that I can easily track my health progress over time.**
