@@ -161,6 +161,27 @@ app.get("/current-weight", async (req, res) => {
 });
 
 
+// notifications 
+app.get("/notifications", async (req, res) => {
+  if (!req.session.userId) return res.status(401).json({ error: "Not logged in" });
+
+  try {
+      const result = await db.query(
+          "SELECT * FROM bmi_records WHERE user_id = $1 AND DATE(created_at) = CURRENT_DATE",
+          [req.session.userId]
+      );
+
+      if (result.rows.length === 0) {
+          return res.json({ notify: true, message: " No logged weight today!" });
+      } else {
+          return res.json({ notify: false });
+      }
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "Error checking notifications" });
+  }
+});
+
 
 //calcualte actual macros for desired weight 
 async function calculateMacros() {
