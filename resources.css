@@ -1,0 +1,80 @@
+/* this file styles the resources page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+  }
+  
+  /* navbar and logo area */
+  .navbar {
+    background-color: #3b8c6e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* nav links at the top */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav-links a.active {
+    text-decoration: underline;
+  }
+  
+  /* main page content */
+  .content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .resource-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .resource-list li {
+    margin: 10px 0;
+  }
+  
+  /* makes links look nice and easy to read */
+  .resource-list a {
+    color: #007b5e;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .resource-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* footer area */
+  footer {
+    text-align: center;
+    background-color: #3b8c6e;
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+  }
+  
