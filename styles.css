@@ -162,3 +162,13 @@
 .auth-container a:hover {
   text-decoration:underline;
 }
+
+.row {
+  color: white
+}
+.card {
+  color: white
+}
+p {
+  color: white
+}
