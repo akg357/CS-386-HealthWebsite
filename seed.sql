@@ -11,3 +11,13 @@ CREATE TABLE IF NOT EXISTS bmi_records (
   bmi NUMERIC NOT NULL,
   created_at TIMESTAMP DEFAULT NOW()
 );
+
+CREATE TABLE IF NOT EXISTS desired_weight_records(
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  weight NUMERIC NOT NULL,
+  desired_weight NOT NULL,
+  proteins NOT NULL,
+  carbs NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
