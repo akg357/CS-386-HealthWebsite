@@ -1,9 +1,11 @@
  # D4 Implementation 1
  ## 1. Introduction
- **Description:**
- **Value proposition:**
- **MVP:**
- **Repository:**
+ **Description: Health website system is designed to help users moitor their health and be able to use a bmi calculator and 
+       be stay informed and help users achieve goals in health. Our website will allow for easy navigatoin. **
+ **Value proposition:Our health website enables personal health data by offereing a bmi calculator and helping users stay informed**
+ **MVP:Our main features are the bmi calculator and the display of the results after the user inputs their inforamtion. 
+       Our website features also include links to informative websites that will help based on the results a user recieves**
+ **Repository:https://github.com/akg357/CS-386-HealthWebsite.git**
  ## 2. Implemented Requirements
  ### 2.1 Anna Cheatham
  1. **Requirement:** As a user, I want to be able to calculate my BMI, so that I can get a bit of understanding on how healthy I am.
