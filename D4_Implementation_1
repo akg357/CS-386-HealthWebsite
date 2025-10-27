@@ -80,10 +80,14 @@
  2. **Description:** What it does in your system
  3. **Justification:** Why you chose it over alternatives
  ## 5. Learning Strategy
- - Learning resources used (tutorials, documentation, courses)
- - Knowledge sharing methods within the team
- - Challenges faced and how you overcame them
- - Time investment in learning new technologies
+ - Learning resources used (tutorials, documentation, courses): We used some of the inforamtion from the course slides as well as using 
+      outside resources such as tutorials on how to make sure the files can be used together.
+ - Knowledge sharing methods within the team: We communicated our strategies and what we had changed or added and then we would have someone review 
+      our code.
+ - Challenges faced and how you overcame them: challanges faced were not being able to deploy some files onto oracle such as the signin nad signup pages
+         We had remove them for this deployemnt and we will do it on the next one and we changed the code on the other files.
+ - Time investment in learning new technologies: Time investment in learning new technologies was mostly used on oracle this was a new platform that none of 
+         us had used before and we had to learn hoe to deploy our website on there.
  ## 6. Deployment
  1. **Live System Link:*https://cs-386-healthwebsite.netlify.app/* Direct URL to your deployed application
  2. **Deployment Method:*Used Netlify for deployment* Detailed description of your deployment process
