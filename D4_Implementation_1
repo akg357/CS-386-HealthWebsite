@@ -14,11 +14,12 @@
  6. **Automated Tests:**
  7. **Visual Evidence:**
  ### 2.2 Josselin Retiguin
- 1. **Requirement:**
- 2. **Issue:**
- 3. **Pull Request Link:**
- 4. **Implemented By:**
- 5. **Approved By:**
+ 1. **Requirement:As a registered user, I want to ensure my data is saved and viewable 
+    every time I log back in so that I can easily track my health progress over time.**
+ 2. **Issue:https://github.com/akg357/CS-386-HealthWebsite/issues/15**
+ 3. **Pull Request Link:https://github.com/akg357/CS-386-HealthWebsite/pull/18**
+ 4. **Implemented By:Josselin**
+ 5. **Approved By:Anna**
  6. **Automated Tests:**
  7. **Visual Evidence:**
  ### 2.3 Aron Gebrezghr
