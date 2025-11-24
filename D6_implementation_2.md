@@ -339,26 +339,31 @@ Suggestion 2
 **Decision: Do next week
 **Explanation: Makes the site easier to navigate with less scrolling, cleaner file, and fewer future bugs. So will do this change soon to keep the code clean.
 
-### 5.1 AI Interaction
+### Suggestion 5
 
-**Tool Used:**
-**Prompt Engineering:**
-**Conversion Link: (if applicable)**
+**AI Feedback:** Inconsistent naming and ambiguity:
+resetIfNewDay() vs scheduleMidnightReset() — names are okay but ambiguous about side effects. clearTasks() manipulates storage but name doesn't indicate UI update.
+getTasks() and saveTasks() are fine, but there is no loadFromStorage vs loadIntoUI clarity.
+Why it hurts: Future maintainers unsure where to add features (e.g., marking persistent vs transient state).
+**Assigned Reviewer** Anna Cheatham
+**Severity Assesment:** [Low]
+**Decision:** [Denied]
+**Explanation:** I feel as if the names really do speak for themselves and aren’t that ambiguous. Like resetIfNewDay() does exactly as it says. It resets the tasks if a new day.
 
+### Suggestion 6
 
-### 5.2 Detailed Analysis and Response
-
---this will have to be done for each AI suggestion--
-
-**AI Feedback:**
-**Assigned Reviewer**
-**Severity Assesment:**
-**Decision:**
-**Explanation:**
+**AI Feedback:** No unique IDs for tasks:
+Tasks are stored as { text, completed } only. When two tasks have identical text, operations like deleteTask(index) are index-based, not id-based. This prevents stable task identity across operations and complicates reordering or syncing.
+Why it hurts:
+Difficult to add features (reorder, edit) without introducing unique identifiers.
+**Assigned Reviewer** Anna Cheatham
+**Severity Assesment:** [Low]
+**Decision:** [Denied]
+**Explanation:** As of right now, there are no plans to add those features to the task list so it wouldn’t really make a difference.
 
 ### 5.3 Individual Reflection
 
-**Anna Cheatham: (Mark if completed)**
+**Anna Cheatham: (Completed)**
 **Josselin Retiguin: (Completed)**
 **Aron Gebrezghr: (Completed)**
 **Abel Gebrezghr: (Completed)**
