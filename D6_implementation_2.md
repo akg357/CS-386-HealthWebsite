@@ -50,7 +50,7 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 4. **Implemented By:** Abel Gebrezghr
 5. **Approved By:**  Aron Gebrezghr
 6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/contact-form-feature/tests/contactForm.test.js 
-7. **Visual Evidence:** <img src="images/screenshot_2025-11-23_2048.png" alt="Visual Evidence" width="500">
+7. **Visual Evidence:** ![Visual Evidence](screenshots/Screenshot%202025-11-23%20at%208.59.20%20PM.png)
 
 
 
