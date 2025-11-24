@@ -6,10 +6,10 @@
 **Value Proposition:**
 **Repistory: (link to github)**
 **MVP:**
-1. **Description: Strive is a health-tracking system designed to help individuals improve their physical well-being through clear, science-backed guidance. Many people struggle with understanding diets, workout plans, and the overwhelming amount of nutrition information available. Strive addresses this by offering a streamlined platform where users can calculate macros, plan goals, and receive general recommendations. The system prioritizes clarity, simplicity, and actionable insights, especially for athletes such as wrestlers and fighters who must meet precise weight goals.
-2. **Value Proposition: Strive reduces confusion and decision-fatigue by consolidating essential health tools, such as BMI calculation, macro planning, and meal suggestions, into one intuitive interface. Instead of sifting through conflicting advice, users receive personalized, data-driven guidance to help them reach their goals more efficiently.
-3. **Repistory: (link to github)https://github.com/akg357/CS-386-HealthWebsite.git
-4. **MVP: The MVP focuses on delivering the core functionality users rely on most
+1. **Description:** Strive is a health-tracking system designed to help individuals improve their physical well-being through clear, science-backed guidance. Many people struggle with understanding diets, workout plans, and the overwhelming amount of nutrition information available. Strive addresses this by offering a streamlined platform where users can calculate macros, plan goals, and receive general recommendations. The system prioritizes clarity, simplicity, and actionable insights, especially for athletes such as wrestlers and fighters who must meet precise weight goals.
+2. **Value Proposition:** Strive reduces confusion and decision-fatigue by consolidating essential health tools, such as BMI calculation, macro planning, and meal suggestions, into one intuitive interface. Instead of sifting through conflicting advice, users receive personalized, data-driven guidance to help them reach their goals more efficiently.
+3. **Repistory:** (link to github)https://github.com/akg357/CS-386-HealthWebsite.git
+4. **MVP:** The MVP focuses on delivering the core functionality users rely on most
 BMI Calculator: Supports both metric and imperial systems through a clean interface
 Macro Calculator: Provides protein and carbohydrate recommendations tailored to user-defined weight goals
 Basic Meal Suggestions: Recommends options based on user's calorie and macro requirements.
@@ -39,53 +39,22 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 2.3 Aron Gebrezghr
 
-1. **Requirement:**
-   As a user who visits the site, I want a navigation bar and a Resources page so that I can easily move between pages and quickly find approved health information.
-
-2. **Issue Link:**
-
-   https://github.com/akg357/CS-386-HealthWebsite/issues
-
-3. **Pull Request Link:**
-
-   No pull request – this requirement was implemented through direct commits to the main branch by the repository owner.  
+1. **Requirement:** As a user who visits the site, I want a navigation bar and a Resources page so that I can easily move between pages and quickly find approved health information.
+2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues
+3. **Pull Request Link:** No pull request – this requirement was implemented through direct commits to the main branch by the repository owner.  
 Commit history:
 https://github.com/akg357/CS-386-HealthWebsite/commits/main?author=akg357
 Commit history of Owner sub account made to push files into main - https://github.com/akg357/CS-386-HealthWebsite/commits?author=akg357nau
-
-4. **Implemented By:**
-
-   Aron Gebrezghr was the author 
-
-
-   
-5. **Approved By:**
-
-   Abel Gebrezghr reviewed the implementation. I approved the changes  since I am the owner of the repository.
-
-
-
+4. **Implemented By:** Aron Gebrezghr was the author
+5. **Approved By:** Abel Gebrezghr reviewed the implementation. I approved the changes  since I am the owner of the repository.
 6. **Automated Tests:**
-   - Clicking each item in the navigation bar to make sure it opened the correct page.  
+ - Clicking each item in the navigation bar to make sure it opened the correct page.  
  - Opening the Resources page and verifying that all links appeared and navigated to the correct external resources.
-
-
-7. **Visual Evidence:**
-   
+7. **Visual Evidence:** 
 <img width="1180" height="643" alt="Screenshot 2025-11-23 at 9 43 36 PM" src="https://github.com/user-attachments/assets/750adf44-d7b5-4e83-9f95-c7e95c788ee2" />
 
+### 2.4 Abel Gebrezghr
 
-
-
- ### 2.4 Abel Gebrezghr
-
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
-6. **Automated Tests:** 
-7. **Visual Evidence:** 
 1. **Requirement:** As a user , I want to write down my contact information so that medical experts can reach out to me for guidance .
 2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues/30 
 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/31
@@ -93,7 +62,6 @@ Commit history of Owner sub account made to push files into main - https://githu
 5. **Approved By:**  Aron Gebrezghr
 6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/contact-form-feature/tests/contactForm.test.js 
 7. **Visual Evidence:** https://drive.google.com/file/d/1OzDDvqh-n7Q1LqS6QOmMJMUkGLcAQWQj/view?usp=sharing 
-
 
 ### 2.5 Emory WIlliams
 
@@ -105,16 +73,8 @@ Commit history of Owner sub account made to push files into main - https://githu
 6. **Automated Tests:** checking various values in the BMI calculation to make sure the resulting BMI was correct
 7. **Visual Evidence:** <img width="937" height="619" alt="image" src="https://github.com/user-attachments/assets/9ddc12ca-e99f-4acf-8894-a4871df578b2" />
 
-
  ### 2.6 Ethan Senger
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
-6. **Automated Tests:** 
-7. **Visual Evidence:** 
 1. **Requirement:**  As someone who exercises regularly, I want to get exercise recommendations so that I can exercise based on my personal needs. #12
 2. **Issue Link:**  https://github.com/akg357/CS-386-HealthWebsite/issues/12
 3. **Pull Request Link:** 
