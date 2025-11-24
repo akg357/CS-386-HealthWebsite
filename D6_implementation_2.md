@@ -97,13 +97,14 @@ Commit history of Owner sub account made to push files into main - https://githu
 
 ### 2.5 Emory WIlliams
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
-6. **Automated Tests:** 
-7. **Visual Evidence:** 
+1. **Requirement:** As a user, I want to calculate my BMI so that I can quickly understand my current health status.
+2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues/35
+3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/47
+4. **Implemented By:** Emory Williams
+5. **Approved By:** Ethan Senger
+6. **Automated Tests:** checking various values in the BMI calculation to make sure the resulting BMI was correct
+7. **Visual Evidence:** <img width="937" height="619" alt="image" src="https://github.com/user-attachments/assets/9ddc12ca-e99f-4acf-8894-a4871df578b2" />
+
 
  ### 2.6 Ethan Senger
 
