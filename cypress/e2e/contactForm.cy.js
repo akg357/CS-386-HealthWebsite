@@ -1,7 +1,6 @@
 describe('Contact Form Acceptance Test', () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:5500/index.html'); // Use your Live Server URL
-  });
+    cy.visit('http://127.0.0.1:5500/index.html'); 
 
   it('should allow a user to fill and submit the contact form', () => {
     cy.get('#contactForm').should('be.visible');
