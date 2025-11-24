@@ -23,7 +23,7 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/40
 4. **Implemented By:** Anna Cheatham
 5. **Approved By:** Aron Gebrezghr
-6. **Automated Tests:** 
+6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/tasklist_test.js
 7. **Visual Evidence:** ![Daily Tasks Image](image-3.png)
 
 ### 2.2 Josselin Retiguin
@@ -340,6 +340,6 @@ Suggestion 4
 
 ## 6. Retrosepctive Analysis
 
-**Key Learnings:**
-**Challenges Overcome:**
-**Future Improvements:**
+**Key Learnings:** As a group we definitely learned how important communication is. There was a lot of talking that had to be done in order to ensure that everything is organized and well done. Also, to ensure that no one was working on the same things at the same time. We also learned the importance of time management as our first implementation deliverable did not go as smoothly as this one. Overall, we learned how best to work together and make sure we actually have time to get things done to the level they need to be.
+**Challenges Overcome:** We collectively all seemed to struggle with procrastination. There were many times we all waited until the last minute to do things and things just didn't go well for us. Eventually, we did learn to start working on things much earlier which ensured that our work went a lot more smoothly and stress free. There were some struggles with understanding github as well and just opting not to use it, but eventually we figured it out and was able to work well on it.
+**Future Improvements:** If we were to continue working on this project, we would definitely be able to use what we learned and expand on it. We didn't flush out the website as much as we hoped, so we would work towards adding some other requirements that we missed due to time.
