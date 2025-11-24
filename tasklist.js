@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scheduleMidnightReset();  // NEW: Reset without refreshing
 });
 
-// ---------------------- TASK FUNCTIONS ----------------------
-
 // Add a task
 function addTask() {
     const input = document.getElementById("taskInput");
@@ -75,8 +73,6 @@ function loadTasks() {
     });
 }
 
-// ---------------------- STORAGE HELPERS ----------------------
-
 function getTasks() {
     return JSON.parse(localStorage.getItem("dailyTasks") || "[]");
 }
@@ -84,8 +80,6 @@ function getTasks() {
 function saveTasks(tasks) {
     localStorage.setItem("dailyTasks", JSON.stringify(tasks));
 }
-
-// ---------------------- RESET LOGIC ----------------------
 
 // Reset at midnight with no refresh (NEW)
 function scheduleMidnightReset() {
