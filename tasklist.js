@@ -107,3 +107,5 @@ function resetIfNewDay() {
         localStorage.setItem("dailyTasks", JSON.stringify([]));
     }
 }
+
+export { scheduleMidnightReset, clearTasks };
