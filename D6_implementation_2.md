@@ -24,7 +24,7 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 4. **Implemented By:** Anna Cheatham
 5. **Approved By:** Aron Gebrezghr
 6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/tasklist_test.js
-7. **Visual Evidence:** ![Daily Tasks Image](image-3.png)
+7. **Visual Evidence:** <img width="1036" height="274" alt="Daily Tasks" src="https://github.com/akg357/CS-386-HealthWebsite/blob/main/image-3.png?raw=true">
 
 ### 2.2 Josselin Retiguin
 
