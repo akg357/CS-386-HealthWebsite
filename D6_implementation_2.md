@@ -61,8 +61,7 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 4. **Implemented By:** Abel Gebrezghr
 5. **Approved By:**  Aron Gebrezghr
 6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/contact-form-feature/tests/contactForm.test.js 
-7. **Visual Evidence:** ![Visual Evidence](screenshots/Screenshot%202025-11-23%20at%208.59.20%20PM.png)
-
+7. **Visual Evidence:** https://drive.google.com/file/d/1OzDDvqh-n7Q1LqS6QOmMJMUkGLcAQWQj/view?usp=sharing 
 
 
 ### 2.5 Emory WIlliams
