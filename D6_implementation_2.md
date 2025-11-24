@@ -66,17 +66,18 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 1. **Requirement:**  As someone who exercises regularly, I want to get exercise recommendations so that I can exercise based on my personal needs. #12
 2. **Issue Link:**  https://github.com/akg357/CS-386-HealthWebsite/issues/12
-3. **Pull Request Link:** 
+3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/33
 4. **Implemented By:**  Ethan Senger
-5. **Approved By:** 
-6. **Automated Tests:** 
+5. **Approved By:** Aron Gebrezghr
+6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/test_exercise_recommendations.js
 7. **Visual Evidence:** https://docs.google.com/document/d/1cpObD6Wz5aAuojys6iUfkJjiqrRQDonPdLDNJUbSj8o/edit?usp=sharing
+
 
 ## 3. Automated Testing 
 
 ### 3.1 Unit Tests
 
-**Test Framework:**
+**Test Framework:** Jest
 **GitHub Repository Link:**
 **Detailed Example of Unit Test:**
 **Screenshot:**
@@ -130,6 +131,7 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ## 6. Retrosepctive Analysis
 
-**Key Learnings:**
-**Challenges Overcome:**
-**Future Improvements:**
+**Key Learnings:** It takes way more time to develop and integrate working code and features than you initially think.
+**Challenges Overcome:** Creating comprehensive unit tests for the new features added.
+**Future Improvements:** We need to plan a little better for the week and deliverables to ensure that the product delivered is the highest quality
+
