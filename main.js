@@ -23,23 +23,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let result;
 
-      if (heightunits == "cm" && weightunits == "kg")
-      {
+      if (heightunits === "cm" && weightunits === "kg") {
         result = bmi_metric(height, weight);
-      }
-      else if (heightunits == "in" && weightunits == "lb")
-      {
+      } 
+      else if (heightunits === "cm" && weightunits === "lb") {
+        const kg = weight * 0.453592;
+        result = bmi_metric(height, kg);
+      } 
+      else if (heightunits === "in" && weightunits === "kg") {
+        const meters = height * 0.0254;
+        result = (weight / (meters * meters)).toFixed(2);
+      } 
+      else if (heightunits === "in" && weightunits === "lb") {
         result = bmi_imperial(height, weight);
+      } 
+      else {
+        document.getElementById("bmiResult").textContent = "Please select valid units.";
+        return;
       }
 
       // Display the result
-      document.getElementById("bmiResult").textContent = `Result: ${result}`;
+      document.getElementById("bmiResult").textContent = `Your BMI is ${result}`;
     }
 
     // Example function that uses the two inputs
     export function bmi_metric(height, weight) 
     {
-        heightm = height / 100;
+        let heightm = height / 100;
         let bmi = weight / (heightm * heightm);
         let rounded = bmi.toFixed(2);
         return rounded;
