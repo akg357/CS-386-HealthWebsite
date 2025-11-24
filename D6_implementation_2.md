@@ -44,13 +44,14 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
  ### 2.4 Abel Gebrezghr
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
-6. **Automated Tests:** 
-7. **Visual Evidence:** 
+1. **Requirement:** As a user , I want to write down my contact information so that medical experts can reach out to me for guidance .
+2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues/30 
+3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/31
+4. **Implemented By:** Abel Gebrezghr
+5. **Approved By:**  Aron Gebrezghr
+6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/contact-form-feature/tests/contactForm.test.js 
+7. **Visual Evidence:** <img src="path/to/Screenshot 2025-11-23 at 8.48.11 PM.png" alt="My Screenshot" width="500">
+
 
 ### 2.5 Emory WIlliams
 
