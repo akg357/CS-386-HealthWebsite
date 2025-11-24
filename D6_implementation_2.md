@@ -153,7 +153,7 @@ Code snippet:
 
 
 **Screenshot:**
-https://drive.google.com/file/d/1OzDDvqh-n7Q1LqS6QOmMJMUkGLcAQWQj/view?usp=sharing 
+https://docs.google.com/document/d/1Ta0Ohe0qjkDtLIgQHmcinaFMNDcYUybAS4olP-44lMA/edit?usp=sharing
 ## 4. System Demonstration
 
 **Video Link:**
