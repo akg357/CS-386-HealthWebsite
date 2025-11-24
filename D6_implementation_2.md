@@ -28,13 +28,14 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 2.2 Josselin Retiguin
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
+1. **Requirement: As a user i want to be able to find the section I want within the main page easly so that I can find the sections faster ** 
+2. **Issue Link: https://github.com/akg357/CS-386-HealthWebsite/issues/41** 
+3. **Pull Request Link: https://github.com/akg357/CS-386-HealthWebsite/pull/39 ** 
+4. **Implemented By: Josselin ** 
+5. **Approved By: Aron** 
 6. **Automated Tests:** 
-7. **Visual Evidence:** 
+7. **Visual Evidence:  <img width="1036" height="274" alt="Screenshot 2025-11-23 at 10 23 44 PM" src="https://github.com/user-attachments/assets/cc4611bb-b982-49f2-b2e6-4f8ed169acfd" />
+   ** 
 
 ### 2.3 Aron Gebrezghr
 
@@ -250,6 +251,101 @@ Assigned Reviewer: Ethan Senger
 Severity Assesment: [Medium]
 DEcision: [Accepted]
 Explanation: This is a good idea as ot seperatesx the logic from the UI manipulation, should make it easier for a unit test as well. Will also allow it to be easier to add onto in the future
+
+Aron Gebrezghr AI Sugestions - 
+
+ AI System ChatGPT
+Model Version GPT-5.1 
+
+Prompt Engineering
+
+
+Prompt 1
+  *Analyze the provided source code and  tell me a report focused on maintainability. Your analysis should cover design, and code quality. For each issue, give specific examples using file names and or snippets. Do not recommend external tools or libraries. Base your answer only on the code I provide.*
+
+ Prompt 2
+  *Based on the same code, list at least 8–10 specific, suggestions to improve maintainability. For each suggestion, state the file  describe the problem, propose a change, and assign a severity level (Critical/High/Medium/Low). 
+
+Which worked better and why (1–2 sentences):
+  Prompt 2 worked better because it forced the AI to give a numbered list of concrete, file-specific suggestions with severity levels, which made it easier to select four items and respond to them.
+
+ Conversation Link
+Not possible chatgpt linked to personal account 
+
+
+Suggestion 1
+
+AI Feedback 
+
+   “Move the repeated navbar styles from the page-specific CSS file into the main stylesheet so that all pages use a single, shared definition of the navigation bar. This will avoid duplication and keep the header consistent across the site.”
+
+ Assigned Reviewer
+   Aron Gebrezghr
+
+ Severity Assessment
+   Medium
+
+Decision
+   Approved
+
+ Explanation
+I moved the `.navbar`, logo, and nav-link rules into the main stylesheet and updated the HTML to use those shared classes. This reduces duplicated CSS and ensures that any future change to the navbar only needs to be made in one place.
+
+Suggestion 2
+
+1. AI Feedback
+
+    Several external links use `target="_blank"` but do not include `rel="noopener noreferrer"`. Add this attribute to improve security and prevent the new tab from accessing `window.opener`.
+
+2. Assigned Reviewer
+   Aron Gebrezghr
+3. Severity Assessment
+   High
+4. Decision:
+   Denied
+5. Explanation:
+   I dint  added `rel="noopener noreferrer"` to all external links that open in a new tab. It has no negative impact on user experience. 
+
+
+Suggestion 3
+
+1. AI Feedback
+
+    The custom button and link styles do not define explicit focus styles, which can make keyboard navigation hard to see. Add clear `:focus` or `:focus-visible` outlines for links and buttons to improve accessibility.
+
+2. Assigned Reviewer
+   Aron Gebrezghr
+
+3. Severity Assessment
+   Medium
+
+4. Decision
+   Approved
+
+5. Explanation
+   I added focus styles that show a visible outline for links and buttons when they are focused via keyboard. This makes it much easier to see which element is active while tabbing through the page.
+
+Suggestion 4
+
+1. AI Feedback
+
+    You define a color palette using CSS variables in one stylesheet, but other files still use hard-coded hex colors. Move those colors into variables and reference the variables instead, so the theme can be changed consistently in one place.
+
+2. Assigned Reviewer
+   Aron Gebrezghr
+
+3. Severity Assessment
+   Low–Medium
+
+4. Decision
+   Denied (partially)
+
+5. Explanation
+  This wasnt solving any existing problem 
+
+
+
+
 
 ### 5.1 AI Interaction
 
