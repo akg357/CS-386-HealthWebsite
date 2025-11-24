@@ -309,8 +309,35 @@ Suggestion 4
   This wasnt solving any existing problem 
 
 
+Emory Williams AI Sugestions - 
+
+ AI System ChatGPT
+Model Version GPT-5.1 
+
+Prompt Engineering
 
 
+Prompt 1
+  *Analyze the provided code and  tell me a report if anything should change to make sure the BMI calulation runs smoothly doesn't have any defects*
+
+ Prompt 2
+  *Based on the same code, give me a list of 5 different things that could be improved or deleted to make the code more readable and useful. 
+
+
+Suggestion 1
+**AI Feedback: "You have two DOMContentLoaded scripts in the HTML"
+**Assigned Reviewer** Emory Williams
+**Severity Assesment:** Low
+**Decision:** Ignore for now maybe come back to later.
+**Explanation: Not an issue immediately affecting the code, the risk of leading to race conditions can be addressed in a different week.
+
+
+Suggestion 2
+**AI Feedback: "Remove duplicate navigation bar block"
+**Assigned Reviewer: Emory Williams
+**Severity Assesment: Medium
+**Decision: Do next week
+**Explanation: Makes the site easier to navigate with less scrolling, cleaner file, and fewer future bugs. So will do this change soon to keep the code clean.
 
 ### 5.1 AI Interaction
 
@@ -335,7 +362,7 @@ Suggestion 4
 **Josselin Retiguin: (Completed)**
 **Aron Gebrezghr: (Completed)**
 **Abel Gebrezghr: (Completed)**
-**Emory WIlliams: (Mark if completed)**
+**Emory WIlliams: (Completed)**
 **Ethan Senger: (Completed)**
 
 ## 6. Retrosepctive Analysis
