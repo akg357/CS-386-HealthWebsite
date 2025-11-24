@@ -34,7 +34,8 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 4. **Implemented By: Josselin ** 
 5. **Approved By: Aron** 
 6. **Automated Tests:** 
-7. **Visual Evidence:** 
+7. **Visual Evidence:  <img width="1036" height="274" alt="Screenshot 2025-11-23 at 10 23 44 PM" src="https://github.com/user-attachments/assets/cc4611bb-b982-49f2-b2e6-4f8ed169acfd" />
+   ** 
 
 ### 2.3 Aron Gebrezghr
 
