@@ -9,12 +9,12 @@
  ## 2. Implemented Requirements
  ### 2.1 Anna Cheatham
  1. **Requirement:** As a user, I want to be able to calculate my BMI, so that I can get a bit of understanding on how healthy I am.
- 2. **Issue:**
- 3. **Pull Request Link:**
+ 2. **Issue:** https://github.com/akg357/CS-386-HealthWebsite/issues/28
+ 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/27
  4. **Implemented By:** Anna Cheatham
- 5. **Approved By:**
- 6. **Automated Tests:**
- 7. **Visual Evidence:**
+ 5. **Approved By:** Ethan
+ 6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/test_bmi.js
+ 7. **Visual Evidence:** It had been working but when merged it no longer outputs the number. I forgot to take a picture before the merge unfortunately.
  ### 2.2 Josselin Retiguin
  1. **Requirement:As a registered user, I want to ensure my data is saved and viewable 
     every time I log back in so that I can easily track my health progress over time.**
@@ -25,21 +25,28 @@
  6. **Automated Tests:**
  7. **Visual Evidence:**
  ### 2.3 Aron Gebrezghr
- 1. **Requirement:**
+ 1. **Requirement:** As a registered User I want to be able to access great recources to help me understand my health better.
  2. **Issue:**
- 3. **Pull Request Link:**
- 4. **Implemented By:**
- 5. **Approved By:**
+ 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/resources.html
+ 4. **Implemented By:** Aron Gebrezghr
+ 5. **Approved By:** Abel gebrezghr 
  6. **Automated Tests:**
- 7. **Visual Evidence:**
+ 7. **Visual Evidence:** https://docs.google.com/document/d/1mZYs16LhCMBAow0Vr5UW66uHGmBsPVlePJUQzYHDhDY/edit?usp=sharing
  ### 2.4 Abel Gebrezghr
  1. **Requirement:**
+ As a user, I want to receive notifications  so that I feel comfortable and confident with what I need to complete and for being greeted into the website .
  2. **Issue:**
+ https://github.com/akg357/CS-386-HealthWebsite/issues/21
  3. **Pull Request Link:**
+ https://github.com/akg357/CS-386-HealthWebsite/pull/22
  4. **Implemented By:**
+ Abel Gebrezghr
  5. **Approved By:**
+ Aron Gebrezghr
  6. **Automated Tests:**
+ https://github.com/akg357/CS-386-HealthWebsite/blob/abel_notification/tests/test_notification.js 
  7. **Visual Evidence:**
+ ![Welcome Notification](https://raw.githubusercontent.com/akg357/CS-386-HealthWebsite/abel_notification/screenshots/Screenshot%202025-10-26%20at%209.14.49%E2%80%AFPM.png) 
  ### 2.5 Emory WIlliams
  1. **Requirement:**
  2. **Issue:**
@@ -51,15 +58,19 @@
  ### 2.6 Ethan Senger
  1. **Requirement:*As a full-time engineer with kids, I want to easily know how to lose weight, so that I can not spend too much time trying to set up a plan to lose weight.*
  2. **Issue:*https://github.com/akg357/CS-386-HealthWebsite/issues/4*
- 3. **Pull Request Link:**
- 4. **Implemented By:Ethan Senger**
- 5. **Approved By:**
+ 3. **Pull Request Link:*https://github.com/akg357/CS-386-HealthWebsite/pull/24*
+ 4. **Implemented By:*Ethan Senger*
+ 5. **Approved By:*Josselin*
  6. **Automated Tests:*https://docs.google.com/document/d/1UV69S2Z4SXSLGD9XNqwS2W_MpmwFHtcGrUJzA9u64z8/edit?tab=t.0*
  7. **Visual Evidence:*https://docs.google.com/document/d/1UV69S2Z4SXSLGD9XNqwS2W_MpmwFHtcGrUJzA9u64z8/edit?usp=sharing*
  ## 3. Auotmated Testing
-1. **Testing Framework:** 
-2. **Test Location:**
-3. **Test Example:**
+1. **Testing Framework:*Node.js so that we can test the server side of the project* 
+2. **Test Location:*tests*
+3. **Test Example:*test file: tests\test_notification.js
+    link to code: see index.html line 165 
+    checks to make sure the text exits in the file
+    ![alt text](image.png)
+*
   1. Link to a specific test file
   2. Link to the corresponding source code being tested
   3. Brief explanation of what the test validates
@@ -69,19 +80,28 @@
  2. **Description:** What it does in your system
  3. **Justification:** Why you chose it over alternatives
  ## 5. Learning Strategy
- - Learning resources used (tutorials, documentation, courses)
- - Knowledge sharing methods within the team
- - Challenges faced and how you overcame them
- - Time investment in learning new technologies
+ - Learning resources used (tutorials, documentation, courses): We used some of the inforamtion from the course slides as well as using 
+      outside resources such as tutorials on how to make sure the files can be used together.
+ - Knowledge sharing methods within the team: We communicated our strategies and what we had changed or added and then we would have someone review 
+      our code.
+ - Challenges faced and how you overcame them: challanges faced were not being able to deploy some files onto oracle such as the signin nad signup pages
+         We had remove them for this deployemnt and we will do it on the next one and we changed the code on the other files.
+ - Time investment in learning new technologies: Time investment in learning new technologies was mostly used on oracle this was a new platform that none of 
+         us had used before and we had to learn hoe to deploy our website on there.
  ## 6. Deployment
+ 1. **Live System Link:*https://cs-386-healthwebsite.netlify.app/* Direct URL to your deployed application
+ 2. **Deployment Method:*Used Netlify for deployment* Detailed description of your deployment process
+ 3. **Platform Justification:*free to use and integrates into github, it always displays the update main branch. Makes it easy so we dont have to update it eveytime there is merge* Why you chose your deployment platform
  1. **Live System Link:** Direct URL to your deployed application
  2. **Deployment Method:** Detailed description of your deployment process
- 3. **Platform Justification:** Why you chose your deployment platform
- ## 7. Licensing
- 1. Inform the license you adopted for your source code (e.g., MIT, Apache 2.0, GPL)
- 2. Configure GitHub accordingly
- 3. Explain why you adopted this license: We chose oracle as our deployment platform becasue it will allow us to implemtnt sql
+ 3. **Platform Justification:** Why you chose your deployment platform:We chose oracle as our deployment platform becasue it will allow us to implemtnt sql
     and it will allow us to use it in for the other deployments without running into problems like we had in other platforms
+ ## 7. Licensing
+ 1. Using MIT
+ 2. Configure GitHub accordingly
+ 3. We adopted this license because it is simple, permissive, and allows others (including my professor or peers) to freely view, use, and learn from my code while giving me credit.
+ 
+ 3. Explain why you adopted this license:
  ## 8. Repository Documentation
  README.md (primary focus)
  CONTRIBUTING.md (optional but recommended)
@@ -100,7 +120,8 @@
  3. **Usability Considerations:** Explain design decisions for user experience
  ## 10. Retrospective Analysis
  1. **Key Learnings:** What did your team discover during development?
- 2. **Challenges Overcome:** Major obstacles and how you solved them
+ 2. **Challenges Overcome:** Major obstacles and how you solved them: Major obstacles were getting some files to work such as the styles sheet
+       and also deploying to oracle and we also had problems with pushing changes
  3. **Future Improvements:** Specific changes planned for the next release
  ## 11. System Demonstration
  - Video Link: URL to a demonstration video
