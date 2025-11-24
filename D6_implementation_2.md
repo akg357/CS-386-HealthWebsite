@@ -113,16 +113,54 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 3.3 Acceptance Tests
 
-**Testing Tools**
-**GitHub Repository Link:**
-**Detailed Example of Acceptance Test:**
-**Screenshot:**
+**Testing Tools** Cypress
+**GitHub Repository Link:** https://github.com/akg357/CS-386-HealthWebsite/tree/contact-form-feature/cypress/e2e
+**Detailed Example of Acceptance Test:**  
+User story: As a user, I want to submit my contact information so that medical or fitness personnel can reach me.
 
+Step-by-step test scenario: 
+1. Open http://127.0.0.1:5500/index.html
+3. Enter "Abel" into the Name area
+4. Enter "Abel@gmail.com" into the Email area
+5. wrote "I want guidance on healthy weight." into the text area
+6. Submit form 
+7. Got the  "Thank you for contacting us!" message
+
+Expected outcomes: user fills out sheet and gets confirmation  message when completed
+GitHub link = https://github.com/akg357/CS-386-HealthWebsite/blob/contact-form-feature/cypress/e2e/contactForm.cy.js 
+Code snippet: 
+('Contact Form Acceptance Test', () => {
+  beforeEach(() => {
+    cy.visit('http://127.0.0.1:5500/index.html'); // Use your Live Server URL
+  });
+
+
+  it('should allow a user to fill and submit the contact form', () => {
+    cy.get('#contactForm').should('be.visible');
+    cy.get('#name').type('John Doe');
+    cy.get('#email').type('john@example.com');
+    cy.get('#message').type('I want guidance on healthy weight.');
+    cy.get('#btnSubmit').click();
+    cy.get('.successMessage')
+      .should('be.visible')
+      .and('contain', 'Thank you for contacting us!');
+  });
+});
+
+
+**Screenshot:**
+https://drive.google.com/file/d/1OzDDvqh-n7Q1LqS6QOmMJMUkGLcAQWQj/view?usp=sharing 
 ## 4. System Demonstration
 
 **Video Link:**
 
 ## 5. AI-Assisted Code Quality Review
+Abels ai feedback
+1.Test that the form shows an error when required fields are left blank.
+2.Verify that an invalid email address triggers a validation error.
+3.Check that very long messages can be submitted without breaking the form.
+4.Ensure the form can be submitted multiple times in a row without issues.
+Citation: AI-generated suggestions by ChatGPT, OpenAI, 2025.
 
 ### 5.1 AI Interaction
 
