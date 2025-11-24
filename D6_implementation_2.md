@@ -331,7 +331,7 @@ Suggestion 4
 ### 5.3 Individual Reflection
 
 **Anna Cheatham: (Mark if completed)**
-**Josselin Retiguin: (Mark if completed)**
+**Josselin Retiguin: (Completed)**
 **Aron Gebrezghr: (Completed)**
 **Abel Gebrezghr: (Completed)**
 **Emory WIlliams: (Mark if completed)**
