@@ -246,6 +246,11 @@ Explanation: Explain either:
 I chose not to implement the code because it wasn't necessary and wouldn't generally make a massive change 
 
 
+AI feedback: seperatre UI updates from logic in exercise.js
+Assigned Reviewer: Ethan Senger
+Severity Assesment: [Medium]
+DEcision: [Accepted]
+Explanation: This is a good idea as ot seperatesx the logic from the UI manipulation, should make it easier for a unit test as well. Will also allow it to be easier to add onto in the future
 
 Aron Gebrezghr AI Sugestions - 
 
