@@ -33,6 +33,18 @@
         </ul>
       </nav>
 
+      <div class="container">
+        <h1>Daily Tasks</h1>
+
+        <div class="input-row">
+            <input id="taskInput" type="text" placeholder="Add a new task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <button id="clearBtnTasks" onclick="clearTasks()">Clear All</button>
+
+        <ul id="taskList"></ul>
+      </div>
 
       <div class="grid">
         <!-- Card 1: Find Healthy Weight -->
@@ -231,6 +243,7 @@
     <!-- <script src="app.js"></script> -->
     <script src="main.js"></script>
     <script src="tests/test_exercise_recommendations.js"></script>
+    <script src="tasklist.js"></script>
 
 
     <script>

@@ -172,3 +172,50 @@
 p {
   color: white
 }
+
+.input-tasks {
+    display: flex;
+    gap: 10px;
+}
+
+#taskList {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+
+
+li {
+    list-style: none;
+    background: #0f172a;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between; /* keeps task on left, X on right */
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+#clearBtnTasks {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-btn-tasks {
+    background: #ff4c4c;
+    border: none;
+    padding: 2px 6px;    /* smaller button */
+    font-size: 12px;     /* smaller text */
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;   /* small gap from task text */
+    width: 20px
+}
