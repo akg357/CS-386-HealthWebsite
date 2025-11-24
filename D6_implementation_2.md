@@ -204,11 +204,46 @@ https://docs.google.com/document/d/1Ta0Ohe0qjkDtLIgQHmcinaFMNDcYUybAS4olP-44lMA/
 
 ## 5. AI-Assisted Code Quality Review
 Abels ai feedback
-1.Test that the form shows an error when required fields are left blank.
-2.Verify that an invalid email address triggers a validation error.
-3.Check that very long messages can be submitted without breaking the form.
-4.Ensure the form can be submitted multiple times in a row without issues.
-Citation: AI-generated suggestions by ChatGPT, OpenAI, 2025.
+AI Interaction
+Tool Used: chatgpt
+Prompt Engineering: review the provided code and giving me any improvements that could be made that would help with readability, fluidity, and more 
+Conversation Link: Provide shareable link(s) if available
+Detailed Analysis and Response. For each AI suggestion, provide:
+
+
+
+
+AI Feedback 1: Use <fieldset> and <legend> to group form elements semantically. This improves accessibility and clarity for screen readers.
+Assigned Reviewer: Aron Gebrezghr
+Severity Assessment: [medium]
+Decision: [Approved]
+Explanation: Explain either:
+I chose  to implement the code because it was necessary for bettering readability
+
+
+AI Feedback 2: Consider adding aria-required="true" on required fields to enhance screen reader feedback.
+Assigned Reviewer: Aron Gebrezghr
+Severity Assessment: [medium]
+Decision: [Approved]
+Explanation: Explain either:
+I chose to implement the code because it was necessary and would significantly improve the required fields generally make a massive change 
+
+
+AI Feedback 3: Inline styles (e.g., style="color: green; margin-top: 10px;") should be moved to CSS classes for maintainability.
+Assigned Reviewer: Aron Gebrezghr
+Severity Assessment: [medium]
+Decision: [Approved]
+Explanation: Explain either:
+I chose to implement the code because it was necessary and would generally make a massive change especially in having better maintainability  
+
+
+AI Feedback 4: Use type="submit" and type="reset" buttons with proper styling and aria-labels for clarity.
+Assigned Reviewer: Aron Gebrezghr
+Severity Assessment: [medium]
+Decision: [Rejected]
+Explanation: Explain either:
+I chose not to implement the code because it wasn't necessary and wouldn't generally make a massive change 
+
 
 ### 5.1 AI Interaction
 
