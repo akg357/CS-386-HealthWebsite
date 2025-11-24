@@ -102,11 +102,14 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 3.2 Integration Tests
 
-**Test Framework/Tools:**
-**GitHub Repository Link:**
-**Description of Scenario:**
-**Example of Complete integration Test Case:**
-**Screenshot:**
+**Test Framework/Tools:Mocha + JSDOM**
+**GitHub Repository Link:https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/test_integration.js**
+**Description of Scenario:Tests how the bmi interacts with main.js file and how the macro calculations interact 
+      with the macros.js file**
+**Example of Complete integration Test Case: the https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/test_integration.js 
+       it shows the calls of the js files and how it has to wait for the attachment**
+**Screenshot:               
+<img width="589" height="109" alt="Screenshot 2025-11-23 at 9 20 15 PM" src="https://github.com/user-attachments/assets/507e6364-bb6f-4019-95e4-5f48c9ad39c9" />   **
 
 ### 3.3 Acceptance Tests
 
