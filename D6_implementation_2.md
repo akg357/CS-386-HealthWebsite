@@ -212,7 +212,7 @@ Citation: AI-generated suggestions by ChatGPT, OpenAI, 2025.
 
 **Anna Cheatham: (Mark if completed)**
 **Josselin Retiguin: (Mark if completed)**
-**Aron Gebrezghr: (Mark if completed)**
+**Aron Gebrezghr: (Completed)**
 **Abel Gebrezghr: (Mark if completed)**
 **Emory WIlliams: (Mark if completed)**
 **Ethan Senger: (Mark if completed)**
