@@ -267,7 +267,7 @@ I chose not to implement the code because it wasn't necessary and wouldn't gener
 **Anna Cheatham: (Mark if completed)**
 **Josselin Retiguin: (Mark if completed)**
 **Aron Gebrezghr: (Completed)**
-**Abel Gebrezghr: (Mark if completed)**
+**Abel Gebrezghr: (Completed)**
 **Emory WIlliams: (Mark if completed)**
 **Ethan Senger: (Mark if completed)**
 
