@@ -38,13 +38,17 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 2.3 Aron Gebrezghr
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
-6. **Automated Tests:** 
-7. **Visual Evidence:** 
+1. **Requirement:**
+   As a user who visits the site, I want a navigation bar and a Resources page so that I can easily move between pages and quickly find approved health information.
+
+3. **Issue Link:** 
+4. **Pull Request Link:** 
+5. **Implemented By:** 
+6. **Approved By:** 
+7. **Automated Tests:** 
+8. **Visual Evidence:**
+
+
 
  ### 2.4 Abel Gebrezghr
 
