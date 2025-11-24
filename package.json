@@ -1,14 +1,25 @@
 {
   "name": "healthwebsite",
-  "type": "module",
+
   "version": "1.0.0",
   "description": "Health Helper web app",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "npx jest"
+=======
+  "start": "node app.js",
+  "dev": "nodemon app.js",
+  "test": "jest"
+>>>>>>> origin/main
   },
+  "jest": {
+  "testMatch": ["**/HealthService.test.js"]
+  },
+
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akg357/CS-386-HealthWebsite.git"
