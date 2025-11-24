@@ -18,13 +18,13 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 2.1 Anna Cheatham
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
+1. **Requirement:** As an honors student I want to have a daily task menu so I don't have to stress about making new schedules every day.
+2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues/9
+3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/40
+4. **Implemented By:** Anna Cheatham
+5. **Approved By:** Aron Gebrezghr
 6. **Automated Tests:** 
-7. **Visual Evidence:** 
+7. **Visual Evidence:** ![Daily Tasks Image](image-3.png)
 
 ### 2.2 Josselin Retiguin
 
@@ -116,12 +116,11 @@ Commit history of Owner sub account made to push files into main - https://githu
 7. **Visual Evidence:** 
 1. **Requirement:**  As someone who exercises regularly, I want to get exercise recommendations so that I can exercise based on my personal needs. #12
 2. **Issue Link:**  https://github.com/akg357/CS-386-HealthWebsite/issues/12
-3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/33
+3. **Pull Request Link:** 
 4. **Implemented By:**  Ethan Senger
-5. **Approved By:** Aron Gebrezghr
-6. **Automated Tests:** https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/test_exercise_recommendations.js
+5. **Approved By:** 
+6. **Automated Tests:** 
 7. **Visual Evidence:** https://docs.google.com/document/d/1cpObD6Wz5aAuojys6iUfkJjiqrRQDonPdLDNJUbSj8o/edit?usp=sharing
-
 
 ## 3. Automated Testing 
 
@@ -205,46 +204,11 @@ https://docs.google.com/document/d/1Ta0Ohe0qjkDtLIgQHmcinaFMNDcYUybAS4olP-44lMA/
 
 ## 5. AI-Assisted Code Quality Review
 Abels ai feedback
-AI Interaction
-Tool Used: chatgpt
-Prompt Engineering: review the provided code and giving me any improvements that could be made that would help with readability, fluidity, and more 
-Conversation Link: Provide shareable link(s) if available
-Detailed Analysis and Response. For each AI suggestion, provide:
-
-
-
-
-AI Feedback 1: Use <fieldset> and <legend> to group form elements semantically. This improves accessibility and clarity for screen readers.
-Assigned Reviewer: Aron Gebrezghr
-Severity Assessment: [medium]
-Decision: [Approved]
-Explanation: Explain either:
-I chose  to implement the code because it was necessary for bettering readability
-
-
-AI Feedback 2: Consider adding aria-required="true" on required fields to enhance screen reader feedback.
-Assigned Reviewer: Aron Gebrezghr
-Severity Assessment: [medium]
-Decision: [Approved]
-Explanation: Explain either:
-I chose to implement the code because it was necessary and would significantly improve the required fields generally make a massive change 
-
-
-AI Feedback 3: Inline styles (e.g., style="color: green; margin-top: 10px;") should be moved to CSS classes for maintainability.
-Assigned Reviewer: Aron Gebrezghr
-Severity Assessment: [medium]
-Decision: [Approved]
-Explanation: Explain either:
-I chose to implement the code because it was necessary and would generally make a massive change especially in having better maintainability  
-
-
-AI Feedback 4: Use type="submit" and type="reset" buttons with proper styling and aria-labels for clarity.
-Assigned Reviewer: Aron Gebrezghr
-Severity Assessment: [medium]
-Decision: [Rejected]
-Explanation: Explain either:
-I chose not to implement the code because it wasn't necessary and wouldn't generally make a massive change 
-
+1.Test that the form shows an error when required fields are left blank.
+2.Verify that an invalid email address triggers a validation error.
+3.Check that very long messages can be submitted without breaking the form.
+4.Ensure the form can be submitted multiple times in a row without issues.
+Citation: AI-generated suggestions by ChatGPT, OpenAI, 2025.
 
 AI feedback: seperatre UI updates from logic in exercise.js
 Assigned Reviewer: Ethan Senger
@@ -375,7 +339,6 @@ Suggestion 4
 
 ## 6. Retrosepctive Analysis
 
-**Key Learnings:** It takes way more time to develop and integrate working code and features than you initially think.
-**Challenges Overcome:** Creating comprehensive unit tests for the new features added.
-**Future Improvements:** We need to plan a little better for the week and deliverables to ensure that the product delivered is the highest quality
-
+**Key Learnings:**
+**Challenges Overcome:**
+**Future Improvements:**
