@@ -61,13 +61,13 @@
 
  ### 2.6 Ethan Senger
 
-1. **Requirement:** 
-2. **Issue Link:** 
+1. **Requirement:**  As someone who exercises regularly, I want to get exercise recommendations so that I can exercise based on my personal needs. #12
+2. **Issue Link:**  https://github.com/akg357/CS-386-HealthWebsite/issues/12
 3. **Pull Request Link:** 
-4. **Implemented By:** 
+4. **Implemented By:**  Ethan Senger
 5. **Approved By:** 
 6. **Automated Tests:** 
-7. **Visual Evidence:** 
+7. **Visual Evidence:** https://docs.google.com/document/d/1cpObD6Wz5aAuojys6iUfkJjiqrRQDonPdLDNJUbSj8o/edit?usp=sharing
 
 ## 3. Automated Testing 
 
