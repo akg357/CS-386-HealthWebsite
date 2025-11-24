@@ -125,9 +125,24 @@ Commit history of Owner sub account made to push files into main - https://githu
 ### 3.1 Unit Tests
 
 **Test Framework:**
+We used Jest 
+
 **GitHub Repository Link:**
+https://github.com/akg357/CS-386-HealthWebsite/tree/main/tests
+
 **Detailed Example of Unit Test:**
+GitHub link to the class under test
+https://github.com/akg357/CS-386-HealthWebsite/blob/main/HealthService.js
+
+GitHub link to the test file
+https://github.com/akg357/CS-386-HealthWebsite/blob/main/tests/HealthService.test.js
+
+Brief explanation of what behavior is being tested and which dependencies are being mocked
+This test checks the getDailyCalories(userId) function in HealthService. Instead of calling a real API, what i dis was instead  mock apiClient.fetchUserMeals to return some fake meals with known calories. Then I call getDailyCalories("user-123") and make sure it calls the mock with the right user id and returns the correct total calories. This way I’m only testing my service logic, not any real backend.
+
 **Screenshot:**
+<img width="1030" height="609" alt="Screenshot 2025-11-23 at 9 40 12 PM" src="https://github.com/user-attachments/assets/1a38809c-7cbb-4bca-a040-0fe19ce005f4" />
+
 
 ### 3.2 Integration Tests
 
