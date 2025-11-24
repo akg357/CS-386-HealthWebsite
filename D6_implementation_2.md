@@ -28,11 +28,11 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 2.2 Josselin Retiguin
 
-1. **Requirement:** 
-2. **Issue Link:** 
-3. **Pull Request Link:** 
-4. **Implemented By:** 
-5. **Approved By:** 
+1. **Requirement: As a user i want to be able to find the section I want within the main page easly so that I can find the sections faster ** 
+2. **Issue Link: https://github.com/akg357/CS-386-HealthWebsite/issues/41** 
+3. **Pull Request Link: https://github.com/akg357/CS-386-HealthWebsite/pull/39 ** 
+4. **Implemented By: Josselin ** 
+5. **Approved By: Aron** 
 6. **Automated Tests:** 
 7. **Visual Evidence:** 
 
@@ -231,7 +231,7 @@ Citation: AI-generated suggestions by ChatGPT, OpenAI, 2025.
 **Anna Cheatham: (Mark if completed)**
 **Josselin Retiguin: (Mark if completed)**
 **Aron Gebrezghr: (Completed)**
-**Abel Gebrezghr: (Mark if completed)**
+**Abel Gebrezghr: (Completed)**
 **Emory WIlliams: (Mark if completed)**
 **Ethan Senger: (Mark if completed)**
 
