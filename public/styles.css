@@ -162,3 +162,43 @@
 .auth-container a:hover {
   text-decoration:underline;
 }
+
+/* Main Navigation Bar */
+.main-nav {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  position: sticky; 
+  top: 0;
+  background: var(--panel);
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 12px;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-nav a:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
