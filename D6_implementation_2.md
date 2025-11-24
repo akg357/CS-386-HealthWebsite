@@ -71,6 +71,7 @@ Commit history of Owner sub account made to push files into main - https://githu
 
 7. **Visual Evidence:**
    
+<img width="1180" height="643" alt="Screenshot 2025-11-23 at 9 43 36 PM" src="https://github.com/user-attachments/assets/750adf44-d7b5-4e83-9f95-c7e95c788ee2" />
 
 
 
