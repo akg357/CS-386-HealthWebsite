@@ -170,11 +170,15 @@ Abels ai feedback
 4.Ensure the form can be submitted multiple times in a row without issues.
 Citation: AI-generated suggestions by ChatGPT, OpenAI, 2025.
 
-AI feedback: seperatre UI updates from logic in exercise.js
-Assigned Reviewer: Ethan Senger
-Severity Assesment: [Medium]
-DEcision: [Accepted]
-Explanation: This is a good idea as ot seperatesx the logic from the UI manipulation, should make it easier for a unit test as well. Will also allow it to be easier to add onto in the future
+**AI feedback:** seperatre UI updates from logic in exercise.js
+
+**Assigned Reviewer:** Ethan Senger
+
+**Severity Assesment:** [Medium]
+
+**Decision:** [Accepted]
+
+**Explanation:** This is a good idea as ot seperatesx the logic from the UI manipulation, should make it easier for a unit test as well. Will also allow it to be easier to add onto in the future
 
 ### Aron Gebrezghr AI Sugestions
 
@@ -193,8 +197,11 @@ Not possible chatgpt linked to personal account
 #### Suggestion 1
 
 **AI Feedback:** “Move the repeated navbar styles from the page-specific CSS file into the main stylesheet so that all pages use a single, shared definition of the navigation bar. This will avoid duplication and keep the header consistent across the site.”
+
 **Assigned Reviewer** Aron Gebrezghr
+
 **Severity Assesment:** Medium
+
 **Decision:** Approved
 
 **Explanation:** I moved the `.navbar`, logo, and nav-link rules into the main stylesheet and updated the HTML to use those shared classes. This reduces duplicated CSS and ensures that any future change to the navbar only needs to be made in one place.
@@ -202,26 +209,38 @@ Not possible chatgpt linked to personal account
 #### Suggestion 2
 
 **AI Feedback:** Several external links use `target="_blank"` but do not include `rel="noopener noreferrer"`. Add this attribute to improve security and prevent the new tab from accessing `window.opener`.
+
 **Assigned Reviewer** Aron Gebrezghr
+
 **Severity Assesment:** High
+
 **Decision:** Denied
+
 **Explanation:** I didn't  added `rel="noopener noreferrer"` to all external links that open in a new tab. It has no negative impact on user experience. 
 
 
 #### Suggestion 3
 
 **AI Feedback:** The custom button and link styles do not define explicit focus styles, which can make keyboard navigation hard to see. Add clear `:focus` or `:focus-visible` outlines for links and buttons to improve accessibility.
+
 **Assigned Reviewer** Aron Gebrezghr
+
 **Severity Assesment:** Medium
+
 **Decision:** Approved
+
 **Explanation:** I added focus styles that show a visible outline for links and buttons when they are focused via keyboard. This makes it much easier to see which element is active while tabbing through the page.
 
 #### Suggestion 4
 
 **AI Feedback:** You define a color palette using CSS variables in one stylesheet, but other files still use hard-coded hex colors. Move those colors into variables and reference the variables instead, so the theme can be changed consistently in one place.
+
 **Assigned Reviewer** Aron Gebrezghr
+
 **Severity Assesment:** Low–Medium
+
 **Decision:** Denied (partially)
+
 **Explanation:** This wasnt solving any existing problem 
 
 
@@ -232,40 +251,54 @@ Not possible chatgpt linked to personal account
 
 **Prompt 1:** *Analyze the provided code and  tell me a report if anything should change to make sure the BMI calulation runs smoothly doesn't have any defects*
 
- **Prompt 2:** *Based on the same code, give me a list of 5 different things that could be improved or deleted to make the code more readable and useful. 
+**Prompt 2:** *Based on the same code, give me a list of 5 different things that could be improved or deleted to make the code more readable and useful. 
 
 #### Suggestion 1
 
 **AI Feedback:** "You have two DOMContentLoaded scripts in the HTML"
+
 **Assigned Reviewer** Emory Williams
+
 **Severity Assesment:** Low
+
 **Decision:** Ignore for now maybe come back to later.
+
 **Explanation:** Not an issue immediately affecting the code, the risk of leading to race conditions can be addressed in a different week.
 
 
 #### Suggestion 2
 
 **AI Feedback:** "Remove duplicate navigation bar block"
+
 **Assigned Reviewer:** Emory Williams
+
 **Severity Assesment:** Medium
+
 **Decision:** Do next week
+
 **Explanation:** Makes the site easier to navigate with less scrolling, cleaner file, and fewer future bugs. So will do this change soon to keep the code clean.
 
 ### Anna Cheatham AI Feedback
-#### Suggestion 1
 
 **AI System:** ChatGPT
+
 **Model Version:** GPT-5.1
 
 **Prompt:** Used the example provided on canvas.
+
+#### Suggestion 1
 
 **AI Feedback:** Inconsistent naming and ambiguity:
 - resetIfNewDay() vs scheduleMidnightReset() — names are okay but ambiguous about side effects. clearTasks() manipulates -storage but name doesn't indicate UI update.
 - getTasks() and saveTasks() are fine, but there is no loadFromStorage vs loadIntoUI clarity.
 - Why it hurts: Future maintainers unsure where to add features (e.g., marking persistent vs transient state).
+
 **Assigned Reviewer** Anna Cheatham
+
 **Severity Assesment:** [Low]
+
 **Decision:** [Denied]
+
 **Explanation:** I feel as if the names really do speak for themselves and aren’t that ambiguous. Like resetIfNewDay() does exactly as it says. It resets the tasks if a new day.
 
 #### Suggestion 2
@@ -273,18 +306,27 @@ Not possible chatgpt linked to personal account
 **AI Feedback:** No unique IDs for tasks:
 - Tasks are stored as { text, completed } only. When two tasks have identical text, operations like deleteTask(index) are index-based, not id-based. This prevents stable task identity across operations and complicates reordering or syncing.
 - Why it hurts: Difficult to add features (reorder, edit) without introducing unique identifiers.
+
 **Assigned Reviewer** Anna Cheatham
+
 **Severity Assesment:** [Low]
+
 **Decision:** [Denied]
+
 **Explanation:** As of right now, there are no plans to add those features to the task list so it wouldn’t really make a difference.
 
 ### 5.3 Individual Reflection
 
 **Anna Cheatham: (Completed)**
+
 **Josselin Retiguin: (Completed)**
+
 **Aron Gebrezghr: (Completed)**
+
 **Abel Gebrezghr: (Completed)**
+
 **Emory WIlliams: (Completed)**
+
 **Ethan Senger: (Completed)**
 
 ## 6. Retrosepctive Analysis
