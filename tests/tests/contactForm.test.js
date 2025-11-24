@@ -1,3 +1,3 @@
-test("contact form feature loads correctly", () => {
+test("Contact form loads", () => {
     expect(true).toBe(true);
   });
