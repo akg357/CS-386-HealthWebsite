@@ -200,7 +200,7 @@ Code snippet:
 https://docs.google.com/document/d/1Ta0Ohe0qjkDtLIgQHmcinaFMNDcYUybAS4olP-44lMA/edit?usp=sharing
 ## 4. System Demonstration
 
-**Video Link:**
+**Video Link:** [Watch the video](https://www.youtube.com/watch?v=U0GLUINxUKA)
 
 ## 5. AI-Assisted Code Quality Review
 Abels ai feedback
@@ -335,7 +335,7 @@ Suggestion 4
 **Aron Gebrezghr: (Completed)**
 **Abel Gebrezghr: (Completed)**
 **Emory WIlliams: (Mark if completed)**
-**Ethan Senger: (Mark if completed)**
+**Ethan Senger: (Completed)**
 
 ## 6. Retrosepctive Analysis
 
