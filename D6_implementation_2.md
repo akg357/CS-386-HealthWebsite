@@ -2,6 +2,10 @@
 
 ## 1. Introduction
 
+**Description:**
+**Value Proposition:**
+**Repistory: (link to github)**
+**MVP:**
 1. **Description: Strive is a health-tracking system designed to help individuals improve their physical well-being through clear, science-backed guidance. Many people struggle with understanding diets, workout plans, and the overwhelming amount of nutrition information available. Strive addresses this by offering a streamlined platform where users can calculate macros, plan goals, and receive general recommendations. The system prioritizes clarity, simplicity, and actionable insights, especially for athletes such as wrestlers and fighters who must meet precise weight goals.
 2. **Value Proposition: Strive reduces confusion and decision-fatigue by consolidating essential health tools, such as BMI calculation, macro planning, and meal suggestions, into one intuitive interface. Instead of sifting through conflicting advice, users receive personalized, data-driven guidance to help them reach their goals more efficiently.
 3. **Repistory: (link to github)https://github.com/akg357/CS-386-HealthWebsite.git
@@ -44,6 +48,13 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
  ### 2.4 Abel Gebrezghr
 
+1. **Requirement:** 
+2. **Issue Link:** 
+3. **Pull Request Link:** 
+4. **Implemented By:** 
+5. **Approved By:** 
+6. **Automated Tests:** 
+7. **Visual Evidence:** 
 1. **Requirement:** As a user , I want to write down my contact information so that medical experts can reach out to me for guidance .
 2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues/30 
 3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/31
@@ -66,6 +77,13 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
  ### 2.6 Ethan Senger
 
+1. **Requirement:** 
+2. **Issue Link:** 
+3. **Pull Request Link:** 
+4. **Implemented By:** 
+5. **Approved By:** 
+6. **Automated Tests:** 
+7. **Visual Evidence:** 
 1. **Requirement:**  As someone who exercises regularly, I want to get exercise recommendations so that I can exercise based on my personal needs. #12
 2. **Issue Link:**  https://github.com/akg357/CS-386-HealthWebsite/issues/12
 3. **Pull Request Link:** 
