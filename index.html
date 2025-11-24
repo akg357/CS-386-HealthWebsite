@@ -133,7 +133,7 @@
               </div>
             </fieldset>
 
-
+            
             <div class="inline">
               <button type="button" id="btnCalculate">Calculate Protein & Carbs</button>
               <button type="reset" class="secondary">Clear</button>
@@ -159,6 +159,38 @@
           </form>
         </section>
       </div>
+
+            <!-- Card 3: Contact Form -->
+      <section class="card" aria-labelledby="contactTitle">
+        <h2 id="contactTitle">Contact Us</h2>
+
+        <form id="contactForm" action="/contact" method="POST" novalidate>
+          <div class="row">
+            <div>
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Your message" required></textarea>
+            </div>
+          </div>
+
+          <div class="inline">
+            <button type="submit">Send Message</button>
+            <button type="reset" class="secondary">Clear</button>
+          </div>
+
+          <div id="contactConfirmation" class="result muted" style="color: green; margin-top: 10px;"></div>
+        </form>
+      </section>
 
       <footer>
         <p>Placeholder UI for demo purposes — calculations not implemented.</p>
