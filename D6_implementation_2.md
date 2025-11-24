@@ -41,12 +41,35 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 1. **Requirement:**
    As a user who visits the site, I want a navigation bar and a Resources page so that I can easily move between pages and quickly find approved health information.
 
-3. **Issue Link:** 
-4. **Pull Request Link:** 
-5. **Implemented By:** 
-6. **Approved By:** 
-7. **Automated Tests:** 
-8. **Visual Evidence:**
+2. **Issue Link:**
+
+   https://github.com/akg357/CS-386-HealthWebsite/issues
+
+3. **Pull Request Link:**
+
+   No pull request – this requirement was implemented through direct commits to the main branch by the repository owner.  
+Commit history:
+https://github.com/akg357/CS-386-HealthWebsite/commits/main?author=akg357
+Commit history of Owner sub account made to push files into main - https://github.com/akg357/CS-386-HealthWebsite/commits?author=akg357nau
+
+4. **Implemented By:**
+
+   Aron Gebrezghr was the author 
+
+
+   
+5. **Approved By:**
+
+   Abel Gebrezghr reviewed the implementation. I approved the changes  since I am the owner of the repository.
+
+
+
+6. **Automated Tests:**
+   - Clicking each item in the navigation bar to make sure it opened the correct page.  
+ - Opening the Resources page and verifying that all links appeared and navigated to the correct external resources.
+
+
+7. **Visual Evidence:**
 
 
 
