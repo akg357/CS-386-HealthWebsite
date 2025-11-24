@@ -28,14 +28,13 @@ Basic Meal Suggestions: Recommends options based on user's calorie and macro req
 
 ### 2.2 Josselin Retiguin
 
-1. **Requirement: As a user i want to be able to find the section I want within the main page easly so that I can find the sections faster ** 
-2. **Issue Link: https://github.com/akg357/CS-386-HealthWebsite/issues/41** 
-3. **Pull Request Link: https://github.com/akg357/CS-386-HealthWebsite/pull/39 ** 
-4. **Implemented By: Josselin ** 
-5. **Approved By: Aron** 
+1. **Requirement:** As a user i want to be able to find the section I want within the main page easly so that I can find the sections faster.
+2. **Issue Link:** https://github.com/akg357/CS-386-HealthWebsite/issues/41 
+3. **Pull Request Link:** https://github.com/akg357/CS-386-HealthWebsite/pull/39
+4. **Implemented By:** Josselin
+5. **Approved By:** Aron
 6. **Automated Tests:** 
-7. **Visual Evidence:  <img width="1036" height="274" alt="Screenshot 2025-11-23 at 10 23 44 PM" src="https://github.com/user-attachments/assets/cc4611bb-b982-49f2-b2e6-4f8ed169acfd" />
-   ** 
+7. **Visual Evidence:**  <img width="1036" height="274" alt="Screenshot 2025-11-23 at 10 23 44 PM" src="https://github.com/user-attachments/assets/cc4611bb-b982-49f2-b2e6-4f8ed169acfd" />
 
 ### 2.3 Aron Gebrezghr
 
@@ -299,23 +298,23 @@ Suggestion 2
 **Decision: Do next week
 **Explanation: Makes the site easier to navigate with less scrolling, cleaner file, and fewer future bugs. So will do this change soon to keep the code clean.
 
-### Suggestion 5
+### Anna Cheatham AI Feedback
+#### Suggestion 1
 
 **AI Feedback:** Inconsistent naming and ambiguity:
-resetIfNewDay() vs scheduleMidnightReset() — names are okay but ambiguous about side effects. clearTasks() manipulates storage but name doesn't indicate UI update.
-getTasks() and saveTasks() are fine, but there is no loadFromStorage vs loadIntoUI clarity.
-Why it hurts: Future maintainers unsure where to add features (e.g., marking persistent vs transient state).
+- resetIfNewDay() vs scheduleMidnightReset() — names are okay but ambiguous about side effects. clearTasks() manipulates -storage but name doesn't indicate UI update.
+- getTasks() and saveTasks() are fine, but there is no loadFromStorage vs loadIntoUI clarity.
+- Why it hurts: Future maintainers unsure where to add features (e.g., marking persistent vs transient state).
 **Assigned Reviewer** Anna Cheatham
 **Severity Assesment:** [Low]
 **Decision:** [Denied]
 **Explanation:** I feel as if the names really do speak for themselves and aren’t that ambiguous. Like resetIfNewDay() does exactly as it says. It resets the tasks if a new day.
 
-### Suggestion 6
+#### Suggestion 2
 
 **AI Feedback:** No unique IDs for tasks:
-Tasks are stored as { text, completed } only. When two tasks have identical text, operations like deleteTask(index) are index-based, not id-based. This prevents stable task identity across operations and complicates reordering or syncing.
-Why it hurts:
-Difficult to add features (reorder, edit) without introducing unique identifiers.
+- Tasks are stored as { text, completed } only. When two tasks have identical text, operations like deleteTask(index) are index-based, not id-based. This prevents stable task identity across operations and complicates reordering or syncing.
+- Why it hurts: Difficult to add features (reorder, edit) without introducing unique identifiers.
 **Assigned Reviewer** Anna Cheatham
 **Severity Assesment:** [Low]
 **Decision:** [Denied]
