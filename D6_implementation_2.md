@@ -2,10 +2,13 @@
 
 ## 1. Introduction
 
-**Description:**
-**Value Proposition:**
-**Repistory: (link to github)**
-**MVP:**
+**Description: Strive is a health-tracking system designed to help individuals improve their physical well-being through clear, science-backed guidance. Many people struggle with understanding diets, workout plans, and the overwhelming amount of nutrition information available. Strive addresses this by offering a streamlined platform where users can calculate macros, plan goals, and receive general recommendations. The system prioritizes clarity, simplicity, and actionable insights, especially for athletes such as wrestlers and fighters who must meet precise weight goals.
+**Value Proposition: Strive reduces confusion and decision-fatigue by consolidating essential health tools, such as BMI calculation, macro planning, and meal suggestions, into one intuitive interface. Instead of sifting through conflicting advice, users receive personalized, data-driven guidance to help them reach their goals more efficiently.
+**Repistory: (link to github)https://github.com/akg357/CS-386-HealthWebsite.git
+**MVP: The MVP focuses on delivering the core functionality users rely on most
+BMI Calculator: Supports both metric and imperial systems through a clean interface
+Macro Calculator: Provides protein and carbohydrate recommendations tailored to user-defined weight goals
+Basic Meal Suggestions: Recommends options based on user's calorie and macro requirements.
 
 ## 2. Implemented Requirements 
 
