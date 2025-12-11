@@ -10,4 +10,4 @@ assert(
   "script not found"
 );
 
-console.log("✅ Test passed: script exists");
+console.log(" Test passed");
